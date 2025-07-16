@@ -23,6 +23,7 @@ int main(){
     for(int i = 7; i >= 0; i--) {
         printf("%d", (x >> i) & 1);
     }
+
     printf(")\n");
     printf("Number of 1 bits: %d\n", counts);
     
