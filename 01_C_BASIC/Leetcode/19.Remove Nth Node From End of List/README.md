@@ -8,3 +8,10 @@
 
 ### 2nd 快慢針方法
 - Used two-pointer trick to do it in one pass.
+
+
+### 3rd 
+ 
+- Always consider dummy node when head might be deleted.
+- Two-pointer tricks can reduce one full traversal.
+- Remember `free()` in C to avoid leaks.
