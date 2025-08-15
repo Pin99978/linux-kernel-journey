@@ -31,21 +31,37 @@ int main(){
             i++;
             token = strtok_r(NULL, delimiters, &saveptr);
         }
+        // because i++ , make last command = NULL
         argv[i] = NULL;
         
-        // let shell can execute the command in child process
-        pid_t pid = fork();
-
-        if( pid < 0){
-            perror("fork process fail");
-            return 1;
-        }else if(pid == 0){
-            execvp(argv[0] , argv);
-            perror("fail to execute child process");
-            exit(1);
+        if (strcmp(argv[0], "exit") == 0){
+            break;
+        }else if (strcmp(argv[0], "cd") == 0){
+            if (argv[1] == NULL){
+                fprintf(stderr, "mysh: cd: missing argument\n");
+                continue
+            }else{
+                if (chdir(argv[1]) == -1){
+                    perror("chdir failed");
+                }
+            }
         }else{
-            wait(NULL);
+            // let shell can execute the command in child process
+            pid_t pid = fork();
+
+            if( pid < 0){
+                perror("fork process fail");
+                return 1;
+            }else if(pid == 0){
+                execvp(argv[0] , argv);
+                perror("fail to execute child process");
+                exit(1);
+            }else{
+                wait(NULL);
+            }
         }
+
+
         
         /** only for testing if imput argument is correct
         printf("Parsed arguments:\n");
