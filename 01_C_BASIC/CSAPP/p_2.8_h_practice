@@ -1,0 +1,12 @@
+# this practice the bitwise operation
+
+
+a = 0100 1110
+b = 1110 0001
+question 
+1. ~a = 1011 0001
+
+2. ~b = 0001 1110
+3. a & b = 0100 0000
+4. a | b = 1110 1111
+5. a ^ b = 1010 1111

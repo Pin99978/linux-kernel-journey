@@ -30,7 +30,7 @@ int get_line(char s[], int lim){
         s[i] = c;
     }
     if (c == '\n'){
-        s[i] = c;
+    s[i] = c;
         ++i;
     }
     s[i] = '\0';

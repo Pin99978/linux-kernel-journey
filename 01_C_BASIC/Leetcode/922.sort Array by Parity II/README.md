@@ -70,7 +70,7 @@ int* sortArrayByParityII(int* nums, int numsSize, int* returnSize) {
         }
     }
     
-    *returnSize = numsSize;
+        git commit -m "feat: add LeetCode 922 Sort Array by Parity II C solution with documentation"
     return arr;
 }
 ```
