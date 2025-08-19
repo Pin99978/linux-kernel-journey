@@ -1,7 +1,7 @@
 
 # Linux Kernel Journey
 
-本專案記錄自學 Linux Kernel 及系統程式設計的 1 年計畫，包含 C、Rust、CSAPP、作業系統等主題，並整理各類學習資源與練習。
+本專案記錄自學 Linux Kernel 及系統程式設計的 1 年計畫，包含 C、CSAPP、作業系統等主題，並整理各類學習資源與練習。
 
 ## 學習計畫摘要
 | 時間區間 | 目標 |
